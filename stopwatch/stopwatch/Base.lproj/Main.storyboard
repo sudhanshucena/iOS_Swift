@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bZ-P6-Bh9">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="hVp-hk-Bce">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gST-Ka-T4U">
+                                            <connections>
+                                                <action selector="reset:" destination="vXZ-lx-hvc" id="4Bt-dU-SDu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FS-lL-0Gs">
+                                <rect key="frame" x="99" y="245" width="122" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="hpx-yp-grk"/>
+                                    <constraint firstAttribute="width" constant="122" id="nhU-kW-MV5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7J-LI-4Fv">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="QKa-ka-Uh5">
+                                        <connections>
+                                            <action selector="play:" destination="vXZ-lx-hvc" id="Ts1-WR-rpW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HyX-6X-2ha"/>
+                                    <barButtonItem systemItem="pause" id="bGN-O3-fUR">
+                                        <connections>
+                                            <action selector="pause:" destination="vXZ-lx-hvc" id="Iyg-PM-B6Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6FS-lL-0Gs" secondAttribute="centerX" id="DIG-n5-0Ne"/>
+                            <constraint firstItem="0bZ-P6-Bh9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="En6-Ff-2C6"/>
+                            <constraint firstAttribute="centerY" secondItem="6FS-lL-0Gs" secondAttribute="centerY" id="F9v-mJ-p5S"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="e7J-LI-4Fv" secondAttribute="bottom" id="IlQ-CX-nQS"/>
+                            <constraint firstAttribute="trailing" secondItem="0bZ-P6-Bh9" secondAttribute="trailing" id="Od0-n0-bPU"/>
+                            <constraint firstItem="e7J-LI-4Fv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WOa-ly-fsV"/>
+                            <constraint firstAttribute="trailing" secondItem="e7J-LI-4Fv" secondAttribute="trailing" id="YSu-Sm-YKU"/>
+                            <constraint firstItem="0bZ-P6-Bh9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ntr-yD-8hJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="time" destination="6FS-lL-0Gs" id="cwC-pK-ifR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="91"/>
+        </scene>
+    </scenes>
+</document>
